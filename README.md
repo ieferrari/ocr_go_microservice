@@ -40,7 +40,16 @@ wget https://github.com/tesseract-ocr/tessdata/raw/4.00/spa.traineddata
 tesseract --tessdata-dir . example.png  outputbase -l spa --psm 3
 
 
+## Load test 
+On a 1 CPU, 1 GB RAM, vps server on Linode with Ubuntu 20.04.2 LTS
 
+| service not running | running iddle  | high load |
+| ---                 | ---            | ---       |
+|  428 MB RAM         | 530 MB RAM     | 638 MB RAM|
+|  4.4 % CPU          | 5 % CPU        | 60 % CPU  |
+
+
+![load test](load_test_at_1cpu_1Gb_ram_vps.png)
 
 ***
 ## Other languages alternatives
